@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("speed", Mathf.Abs(horizontalMove));
 
         if (Input.GetButtonDown("Jump")) {
+            Debug.Log("kaif");
             jump = true;
             animator.SetBool("isJumping", true);
         }
@@ -31,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void OnLanding() {
+        Debug.Log("HUI");
         animator.SetBool("isJumping", false);
     }
     
