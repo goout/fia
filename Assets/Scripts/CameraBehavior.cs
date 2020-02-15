@@ -13,8 +13,6 @@ public class CameraBehavior : MonoBehaviour
      private float yOffset;
      private float xOffset;
 
-     private float deathBorder = -30f;
-
     void Start()
     {
         yOffset = transform.position.y - player.transform.position.y;
@@ -27,10 +25,6 @@ public class CameraBehavior : MonoBehaviour
             if (player.transform.position.y > yBottomBorder) {
                 transform.position = new Vector3(transform.position.x, player.transform.position.y + yOffset, transform.position.z);
             } 
-            if (player.transform.position.y < deathBorder) {
-                Destroy(player);
-                SceneManager.LoadScene(0);
-            }
             if (player.transform.position.x > xLeftBorder && player.transform.position.x < xRightBorder) {
                 transform.position = new Vector3(player.transform.position.x + xOffset, transform.position.y, transform.position.z);
             }
