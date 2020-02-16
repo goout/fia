@@ -330,6 +330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground_Large (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012647449112, guid: dfb230db22c804bec9cd507756494972, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010731191256, guid: dfb230db22c804bec9cd507756494972, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.6
@@ -430,6 +434,10 @@ PrefabInstance:
     - target: {fileID: 1000013087060202, guid: 17fb6507680a044c48eec60f9650edf7, type: 3}
       propertyPath: m_Name
       value: Ground_Small
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013087060202, guid: 17fb6507680a044c48eec60f9650edf7, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4000013125733568, guid: 17fb6507680a044c48eec60f9650edf7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -533,7 +541,7 @@ GameObject:
   - component: {fileID: 1252206198}
   - component: {fileID: 1252206200}
   - component: {fileID: 1252206201}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: liberty_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -895,6 +903,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212000013700130996, guid: 40c90aaee1ff14811b5f60fd1ab1a3e7,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40c90aaee1ff14811b5f60fd1ab1a3e7, type: 3}
 --- !u!1001 &1952675247
@@ -910,7 +923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000012647449112, guid: dfb230db22c804bec9cd507756494972, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4000010731191256, guid: dfb230db22c804bec9cd507756494972, type: 3}
       propertyPath: m_LocalPosition.x
@@ -968,6 +981,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 212000012382388662, guid: dfb230db22c804bec9cd507756494972,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfb230db22c804bec9cd507756494972, type: 3}
 --- !u!1 &1952675248 stripped
@@ -1012,6 +1030,10 @@ PrefabInstance:
     - target: {fileID: 1000012117921548, guid: 0f9f4297bbe73465bb93f1f634794bea, type: 3}
       propertyPath: m_Name
       value: Ground_Medium
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012117921548, guid: 0f9f4297bbe73465bb93f1f634794bea, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4000013566254716, guid: 0f9f4297bbe73465bb93f1f634794bea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1113,6 +1135,10 @@ PrefabInstance:
     - target: {fileID: 1000013087060202, guid: 17fb6507680a044c48eec60f9650edf7, type: 3}
       propertyPath: m_Name
       value: Ground_Small (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013087060202, guid: 17fb6507680a044c48eec60f9650edf7, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4000013125733568, guid: 17fb6507680a044c48eec60f9650edf7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1264,6 +1290,16 @@ PrefabInstance:
       propertyPath: m_JumpForce
       value: 950
       objectReference: {fileID: 0}
+    - target: {fileID: 7310437075755386702, guid: a7a51bd505e637a43add8de4d743e789,
+        type: 3}
+      propertyPath: m_AirControl
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310437075755386702, guid: a7a51bd505e637a43add8de4d743e789,
+        type: 3}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 7310437075755386703, guid: a7a51bd505e637a43add8de4d743e789,
         type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
@@ -1299,5 +1335,10 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 7310437075923566996, guid: a7a51bd505e637a43add8de4d743e789,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.09
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7a51bd505e637a43add8de4d743e789, type: 3}
