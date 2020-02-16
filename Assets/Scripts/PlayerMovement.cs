@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     float horizontalMove = 0f;
     bool jump = false;
+    bool isAttacking = false;
 
     private float deathBorder = -30f;
 
@@ -27,7 +28,26 @@ public class PlayerMovement : MonoBehaviour
             jump = true;
             animator.SetBool("isJumping", true);
         }
+
+        if (Input.GetButtonDown("Fire1") && !isAttacking) {
+         isAttacking = true;
+         animator.Play("Attack");
+        //  Invoke("ResetAttack", .15f);
+        StartCoroutine(DoAttack());
+        }
+
     }
+
+    IEnumerator DoAttack() {
+        controller.attackHitBox.SetActive(true);
+        yield return new WaitForSeconds(.15f);
+        controller.attackHitBox.SetActive(false);
+        isAttacking = false;
+    }
+
+    // void ResetAttack() {
+    //     isAttacking = false;
+    // }
 
     void FixedUpdate() {
         controller.Move(horizontalMove * Time.fixedDeltaTime, jump);
