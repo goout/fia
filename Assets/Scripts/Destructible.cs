@@ -7,7 +7,7 @@ public class Destructible : MonoBehaviour
 
 bool isShaking = false;
 Vector2 startPos;
-float shakeAmount = .035f;
+float shakeAmount = .06f;
     // Start is called before the first frame update
     void Start()
     {
