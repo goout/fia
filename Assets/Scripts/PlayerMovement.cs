@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isJumping", true);
         }
 
-        if (Input.GetButtonDown("Fire1") && !isAttacking) {
+        if (Input.GetButtonDown("Fire1") && !isAttacking && !animator.GetBool("isJumping")) {
          isAttacking = true;
          animator.Play("Attack");
         //  Invoke("ResetAttack", .15f);
@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator DoAttack() {
         controller.attackHitBox.SetActive(true);
-        yield return new WaitForSeconds(.15f);
+        yield return new WaitForSeconds(.2f);
         controller.attackHitBox.SetActive(false);
         isAttacking = false;
     }
