@@ -21,7 +21,7 @@ float shakeAmount = .06f;
     void Update()
     {
         if(isShaking) {
-            transform.position = startPos + UnityEngine.Random.insideUnitCircle * shakeAmount;
+            transform.position = startPos + UnityEngine.Random.insideUnitCircle * shakeAmount; 
         }
     }
 
