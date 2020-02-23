@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class CameraBehavior : MonoBehaviour
 {
 
-     [SerializeField] private GameObject player;
-     [SerializeField] private float yBottomBorder = -9f; 
-     public float xLeftBorder = -9.35f;
-     public float xRightBorder = 9f; 
-     private float yOffset;
-     private float xOffset;
+    [SerializeField] private GameObject player;
+    [SerializeField] private float yBottomBorder = -9f;
+    public float xLeftBorder = -9.35f;
+    public float xRightBorder = 9f;
+    private float yOffset;
+    private float xOffset;
 
     void Start()
     {
@@ -21,14 +21,17 @@ public class CameraBehavior : MonoBehaviour
 
     void LateUpdate()
     {
-        if (player != null){
-            if (player.transform.position.y > yBottomBorder) {
+        if (player != null)
+        {
+            if (player.transform.position.y > yBottomBorder)
+            {
                 transform.position = new Vector3(transform.position.x, player.transform.position.y + yOffset, transform.position.z);
-            } 
-            if (player.transform.position.x > xLeftBorder && player.transform.position.x < xRightBorder) {
+            }
+            if (player.transform.position.x > xLeftBorder && player.transform.position.x < xRightBorder)
+            {
                 transform.position = new Vector3(player.transform.position.x + xOffset, transform.position.y, transform.position.z);
             }
-        } 
+        }
 
     }
 }

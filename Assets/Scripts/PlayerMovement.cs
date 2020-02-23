@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -23,44 +24,46 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetButtonDown("Jump")) {
+        if (Input.GetButtonDown("Jump"))
+        {
             Debug.Log("jump");
             jump = true;
             animator.SetBool("isJumping", true);
         }
 
-        if (Input.GetButtonDown("Fire1") && !isAttacking && !animator.GetBool("isJumping")) {
-         isAttacking = true;
-         animator.Play("Attack");
-        //  Invoke("ResetAttack", .15f);
-        StartCoroutine(DoAttack());
+        if (Input.GetButtonDown("Fire1") && !isAttacking && !animator.GetBool("isJumping"))
+        {
+            isAttacking = true;
+            animator.Play("Attack");
+            StartCoroutine(DoAttack());
         }
 
     }
 
-    IEnumerator DoAttack() {
+    IEnumerator DoAttack()
+    {
         controller.attackHitBox.SetActive(true);
         yield return new WaitForSeconds(.2f);
         controller.attackHitBox.SetActive(false);
         isAttacking = false;
     }
 
-    // void ResetAttack() {
-    //     isAttacking = false;
-    // }
-
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
         controller.Move(horizontalMove * Time.fixedDeltaTime, jump);
         jump = false;
-            if (transform.position.y < deathBorder) {
-                transform.position = respawnPoint.transform.position;
-                mainCamera.transform.position = new Vector3(0,0,-10);
-            }    
+        if (transform.position.y < deathBorder)
+        {
+           // transform.position = respawnPoint.transform.position;
+          //  mainCamera.transform.position = new Vector3(0, 0, -10);
+          SceneManager.LoadScene("Scene#1");
+        }
     }
 
-    public void OnLanding() {
+    public void OnLanding()
+    {
         Debug.Log("ground");
         animator.SetBool("isJumping", false);
     }
-    
+
 }
