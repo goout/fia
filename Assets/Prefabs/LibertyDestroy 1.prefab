@@ -583,7 +583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceDirection: {x: -1000, y: 6000}
-  torque: 7000
+  torque: 5000
 --- !u!1 &5167534902562476694
 GameObject:
   m_ObjectHideFlags: 0

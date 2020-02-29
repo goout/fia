@@ -38,21 +38,19 @@ public class CharacterController2D : MonoBehaviour
         attackHitBox.SetActive(false);
     }
 
-    void Start() {
+    void Start()
+    {
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
     }
 
-    void Update() {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-           TakeDamage(20);
-        }    
+    void Update()
+    {
     }
 
     void TakeDamage(int damage)
     {
-        currentHealth-=damage;
+        currentHealth -= damage;
         healthbar.SetHealth(currentHealth);
     }
 
@@ -123,5 +121,13 @@ public class CharacterController2D : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Spikes"))
+        {
+            TakeDamage(20);
+        }
     }
 }
