@@ -13,10 +13,13 @@ public class CameraBehavior : MonoBehaviour
     private float yOffset;
     private float xOffset;
 
+    private float delta;
+
     void Start()
     {
+        delta = Camera.main.orthographicSize;
         yOffset = transform.position.y - player.transform.position.y;
-        xOffset = transform.position.x - player.transform.position.x;
+        xOffset = transform.position.x - (player.transform.position.x + delta);
     }
 
     void LateUpdate()
@@ -27,7 +30,7 @@ public class CameraBehavior : MonoBehaviour
             {
                 transform.position = new Vector3(transform.position.x, player.transform.position.y + yOffset, transform.position.z);
             }
-            if (player.transform.position.x > xLeftBorder && player.transform.position.x < xRightBorder)
+            if (player.transform.position.x > (xLeftBorder + delta) && player.transform.position.x < (xRightBorder + delta))
             {
                 transform.position = new Vector3(player.transform.position.x + xOffset, transform.position.y, transform.position.z);
             }
