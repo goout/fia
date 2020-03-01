@@ -21,6 +21,9 @@ public class CharacterController2D : MonoBehaviour
     [Space]
 
     public UnityEvent OnLandEvent;
+    public UnityEvent OnDeathEvent;
+
+    public UnityEvent OnDamageEvent;
 
     [System.Serializable]
     public class BoolEvent : UnityEvent<bool> { }
@@ -35,6 +38,7 @@ public class CharacterController2D : MonoBehaviour
 
         if (OnLandEvent == null)
             OnLandEvent = new UnityEvent();
+
         attackHitBox.SetActive(false);
     }
 
@@ -52,6 +56,13 @@ public class CharacterController2D : MonoBehaviour
     {
         currentHealth -= damage;
         healthbar.SetHealth(currentHealth);
+
+        m_Rigidbody2D.AddForce(new Vector2(m_FacingRight ? -transform.position.x * 25 : transform.position.x * 25 , m_JumpForce / 1.5f));
+        OnDamageEvent.Invoke();
+        if (currentHealth <= 0)
+        {
+            OnDeathEvent.Invoke();
+        }
     }
 
     void FixedUpdate()

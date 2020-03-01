@@ -15,8 +15,12 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f;
     bool jump = false;
     bool isAttacking = false;
-
     private float deathBorder = -30f;
+
+    void Start()
+    {
+        animator.SetBool("isAlive", true);
+    }
 
     void Update()
     {
@@ -54,9 +58,7 @@ public class PlayerMovement : MonoBehaviour
         jump = false;
         if (transform.position.y < deathBorder)
         {
-           // transform.position = respawnPoint.transform.position;
-          //  mainCamera.transform.position = new Vector3(0, 0, -10);
-          SceneManager.LoadScene("Scene#1");
+            RestartScene();
         }
     }
 
@@ -64,6 +66,22 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.Log("ground");
         animator.SetBool("isJumping", false);
+    }
+
+    public void OnDeath()
+    {
+        animator.SetBool("isAlive", false);
+        Invoke("RestartScene", 3f);
+    }
+
+    public void OnDamage()
+    {
+        animator.Play("Flinch");
+    }
+
+    private void RestartScene()
+    {
+        SceneManager.LoadScene("Scene#1");
     }
 
 }
