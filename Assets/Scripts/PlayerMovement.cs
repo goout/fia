@@ -25,23 +25,24 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
-        animator.SetFloat("speed", Mathf.Abs(horizontalMove));
-
-        if (Input.GetButtonDown("Jump"))
+        if (animator.GetBool("isAlive"))
         {
-            Debug.Log("jump");
-            jump = true;
-            animator.SetBool("isJumping", true);
-        }
+            animator.SetFloat("speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetButtonDown("Fire1") && !isAttacking && !animator.GetBool("isJumping"))
-        {
-            isAttacking = true;
-            animator.Play("Attack");
-            StartCoroutine(DoAttack());
-        }
+            if (Input.GetButtonDown("Jump"))
+            {
+                Debug.Log("jump");
+                jump = true;
+                animator.SetBool("isJumping", true);
+            }
 
+            if (Input.GetButtonDown("Fire1") && !isAttacking && !animator.GetBool("isJumping"))
+            {
+                isAttacking = true;
+                animator.Play("Attack");
+                StartCoroutine(DoAttack());
+            }
+        }
     }
 
     IEnumerator DoAttack()
