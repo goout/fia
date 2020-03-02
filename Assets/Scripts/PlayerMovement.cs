@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public float runSpeed = 40f;
 
-    public GameObject respawnPoint;
     public Camera mainCamera;
 
     float horizontalMove = 0f;
