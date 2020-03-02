@@ -45,6 +45,7 @@ public class CharacterController2D : MonoBehaviour
 
     void Start()
     {
+        Debug.Log(maxHealth);
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
     }

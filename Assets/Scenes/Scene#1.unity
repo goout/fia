@@ -650,18 +650,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7310437075128284334}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &719533023 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7310437075755386737, guid: a7a51bd505e637a43add8de4d743e789,
+--- !u!4 &787917911 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3644798132733834176, guid: 7cf404d7074a1f148bdb2b590b667b43,
     type: 3}
-  m_PrefabInstance: {fileID: 7310437075128284334}
+  m_PrefabInstance: {fileID: 3644798132093312915}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719533022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5add940dc7f30074bab8259b18587817, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &818266427 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000013087060202, guid: 17fb6507680a044c48eec60f9650edf7,
@@ -1217,6 +1211,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9ec6f212c7124a108a4b0c4fd59efa1, type: 3}
+--- !u!1 &1340329111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1340329112}
+  m_Layer: 8
+  m_Name: AttackCollider
+  m_TagString: Weapon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1340329112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340329111}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 787917911}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1511904401 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000012647449112, guid: dfb230db22c804bec9cd507756494972,
@@ -1556,12 +1580,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40c90aaee1ff14811b5f60fd1ab1a3e7, type: 3}
---- !u!4 &1935820686 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4684091618082918391, guid: 7cf404d7074a1f148bdb2b590b667b43,
-    type: 3}
-  m_PrefabInstance: {fileID: 3644798132093312915}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1952675247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2136,52 +2154,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: skeleton
       objectReference: {fileID: 0}
-    - target: {fileID: 4684091618082918391, guid: 7cf404d7074a1f148bdb2b590b667b43,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.455
-      objectReference: {fileID: 0}
     - target: {fileID: 4774537803565661483, guid: 7cf404d7074a1f148bdb2b590b667b43,
         type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 6710450158203219319, guid: 7cf404d7074a1f148bdb2b590b667b43,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000,
-        type: 0}
-    - target: {fileID: 8711756907132662614, guid: 7cf404d7074a1f148bdb2b590b667b43,
-        type: 3}
-      propertyPath: m_GroundCheck
-      value: 
-      objectReference: {fileID: 1935820686}
-    - target: {fileID: 8711756907132662614, guid: 7cf404d7074a1f148bdb2b590b667b43,
-        type: 3}
-      propertyPath: attackHitBox
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8711756907132662614, guid: 7cf404d7074a1f148bdb2b590b667b43,
-        type: 3}
-      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 719533023}
-    - target: {fileID: 8711756907132662614, guid: 7cf404d7074a1f148bdb2b590b667b43,
-        type: 3}
-      propertyPath: OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 719533023}
-    - target: {fileID: 8711756907132662614, guid: 7cf404d7074a1f148bdb2b590b667b43,
-        type: 3}
-      propertyPath: OnDamageEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 719533023}
     - target: {fileID: 8711756907132662614, guid: 7cf404d7074a1f148bdb2b590b667b43,
         type: 3}
       propertyPath: healthbar
       value: 
       objectReference: {fileID: 2017054651}
+    - target: {fileID: 8711756907132662614, guid: 7cf404d7074a1f148bdb2b590b667b43,
+        type: 3}
+      propertyPath: attackHitBox
+      value: 
+      objectReference: {fileID: 1340329111}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf404d7074a1f148bdb2b590b667b43, type: 3}
 --- !u!1001 &5801498441267006075
