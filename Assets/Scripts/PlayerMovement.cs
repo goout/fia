@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         animator.SetBool("isAlive", true);
+        mainCamera.GetComponent<CameraBehavior>().player = gameObject;
     }
 
     void Update()

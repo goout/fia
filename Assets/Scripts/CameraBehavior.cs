@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class CameraBehavior : MonoBehaviour
 {
 
-    [SerializeField] private GameObject player;
+    public GameObject player;
     [SerializeField] private float yBottomBorder = -9f;
     public float xLeftBorder = -9.35f;
     public float xRightBorder = 9f;

@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d457ba6fc036bf44caf721ed01c27cf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 719533022}
+  player: {fileID: 0}
   yBottomBorder: -9
   xLeftBorder: -9
   xRightBorder: 36
@@ -644,12 +644,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697915700}
   m_CullTransparentMesh: 0
---- !u!1 &719533022 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7310437075755386736, guid: a7a51bd505e637a43add8de4d743e789,
-    type: 3}
-  m_PrefabInstance: {fileID: 7310437075128284334}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &818266427 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000013087060202, guid: 17fb6507680a044c48eec60f9650edf7,
@@ -2353,7 +2347,7 @@ PrefabInstance:
     - target: {fileID: 7310437075755386736, guid: a7a51bd505e637a43add8de4d743e789,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7310437075755386737, guid: a7a51bd505e637a43add8de4d743e789,
         type: 3}
