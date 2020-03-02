@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
 
     float horizontalMove = 0f;
     bool jump = false;
-    bool isAttacking = false;
     private float deathBorder = -30f;
 
     void Start()
@@ -35,9 +34,9 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("isJumping", true);
             }
 
-            if (Input.GetButtonDown("Fire1") && !isAttacking && !animator.GetBool("isJumping"))
+            if (Input.GetButtonDown("Fire1") && !animator.GetBool("isAttacking") && !animator.GetBool("isJumping"))
             {
-                isAttacking = true;
+                animator.SetBool("isAttacking", true);
                 animator.Play("Attack");
                 StartCoroutine(DoAttack());
             }
@@ -49,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         controller.attackHitBox.SetActive(true);
         yield return new WaitForSeconds(.2f);
         controller.attackHitBox.SetActive(false);
-        isAttacking = false;
+        animator.SetBool("isAttacking", false);
     }
 
     void FixedUpdate()
