@@ -8,9 +8,6 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
     public Animator animator;
     public float runSpeed = 40f;
-
-    public Camera mainCamera;
-
     float horizontalMove = 0f;
     bool jump = false;
     private float deathBorder = -30f;
@@ -18,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         animator.SetBool("isAlive", true);
-        mainCamera.GetComponent<CameraBehavior>().player = gameObject;
     }
 
     void Update()
