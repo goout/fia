@@ -265,7 +265,6 @@ MonoBehaviour:
   controller: {fileID: 8711756907132662614}
   animator: {fileID: 3644798132733834183}
   runSpeed: 35
-  mainCamera: {fileID: 0}
 --- !u!114 &8711756907132662614
 MonoBehaviour:
   m_ObjectHideFlags: 0
