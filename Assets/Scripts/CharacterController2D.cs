@@ -59,12 +59,13 @@ public class CharacterController2D : MonoBehaviour
         currentHealth -= damage;
         healthbar.SetHealth(currentHealth);
 
-        m_Rigidbody2D.AddForce(new Vector2(m_FacingRight ? -transform.position.x * 10 : transform.position.x * 10, m_JumpForce / 1.5f));
-        OnDamageEvent.Invoke();
         if (currentHealth <= 0)
         {
             isAlive = false;
             OnDeathEvent.Invoke();
+        } else{
+              m_Rigidbody2D.AddForce(new Vector2(m_FacingRight ? -transform.position.x * 10 : transform.position.x * 10, m_JumpForce / 1.5f));
+              OnDamageEvent.Invoke();
         }
     }
 
