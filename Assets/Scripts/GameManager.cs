@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-  //  public static GameManager instance = null;
+    //  public static GameManager instance = null;
     public static int karma = 0;
 
     public static Vector3 currentPosition = new Vector3(-9.6f, -0.1f, 0f);
@@ -21,14 +21,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-/*         if (instance == null)
-        {
-            instance = this;
-        }
-        else if (instance == this)
-        {
-            Destroy(gameObject);
-        } */
+        /*         if (instance == null)
+                {
+                    instance = this;
+                }
+                else if (instance == this)
+                {
+                    Destroy(gameObject);
+                } */
         cinemaCamera = GameObject.Find("CM vcam1").GetComponent<Cinemachine.CinemachineVirtualCamera>();
         //DontDestroyOnLoad(gameObject);
         InitializeManager();
@@ -62,8 +62,12 @@ public class GameManager : MonoBehaviour
 
     private void CreateNewForm(UnityEngine.Object form, Vector3 position)
     {
+        int currentHealth = 100;
+        if (currentForm)
+            currentHealth = currentForm.GetComponent<CharacterController2D>().currentHealth;
         Destroy(currentForm);
         currentForm = (GameObject)Instantiate(form, position, Quaternion.identity);
+        currentForm.GetComponent<CharacterController2D>().currentHealth = currentHealth;
         currentForm.GetComponent<CharacterController2D>().healthbar = healthbar;
         cinemaCamera.m_Follow = currentForm.transform;
     }

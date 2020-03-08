@@ -36,22 +36,13 @@ public class CharacterController2D : MonoBehaviour
     void Awake()
     {
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
-
-        if (OnLandEvent == null)
-            OnLandEvent = new UnityEvent();
-
         attackHitBox.SetActive(false);
     }
 
     void Start()
     {
-        Debug.Log(maxHealth);
-        currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
-    }
-
-    void Update()
-    {
+        healthbar.SetHealth(currentHealth);
     }
 
     void TakeDamage(int damage)
@@ -63,9 +54,11 @@ public class CharacterController2D : MonoBehaviour
         {
             isAlive = false;
             OnDeathEvent.Invoke();
-        } else{
-              m_Rigidbody2D.AddForce(new Vector2(m_FacingRight ? -transform.position.x * 10 : transform.position.x * 10, m_JumpForce / 1.5f));
-              OnDamageEvent.Invoke();
+        }
+        else
+        {
+            m_Rigidbody2D.AddForce(new Vector2(m_FacingRight ? -transform.position.x * 10 : transform.position.x * 10, m_JumpForce / 1.5f));
+            OnDamageEvent.Invoke();
         }
     }
 

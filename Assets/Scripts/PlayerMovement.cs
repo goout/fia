@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetButtonDown("Jump"))
             {
-                Debug.Log("jump");
+            //    Debug.Log("jump");
                 jump = true;
                 animator.SetBool("isJumping", true);
             }
@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnLanding()
     {
-        Debug.Log("ground");
+       // Debug.Log("ground");
         animator.SetBool("isJumping", false);
     }
 
