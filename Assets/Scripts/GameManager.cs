@@ -1,0 +1,71 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GameManager : MonoBehaviour
+{
+  //  public static GameManager instance = null;
+    public static int karma = 0;
+
+    public static Vector3 currentPosition = new Vector3(-9.6f, -0.1f, 0f);
+
+    public static Vector3 startPosition = new Vector3(-9.6f, -0.1f, 0f);
+
+    [SerializeField] UnityEngine.Object neutral;
+    [SerializeField] UnityEngine.Object evil;
+    [SerializeField] Healthbar healthbar;
+
+    public static GameObject currentForm;
+
+    private static Cinemachine.CinemachineVirtualCamera cinemaCamera;
+
+    void Start()
+    {
+/*         if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance == this)
+        {
+            Destroy(gameObject);
+        } */
+        cinemaCamera = GameObject.Find("CM vcam1").GetComponent<Cinemachine.CinemachineVirtualCamera>();
+        //DontDestroyOnLoad(gameObject);
+        InitializeManager();
+        CreateNewForm(neutral, startPosition);
+    }
+
+    private void InitializeManager()
+    {
+        karma = PlayerPrefs.GetInt("karma", 0);
+    }
+
+    public static void saveSettings()
+    {
+        PlayerPrefs.SetInt("karma", karma);
+        PlayerPrefs.Save();
+    }
+
+    public void ChangeForm(int addendum)
+    {
+        karma += addendum;
+        if (karma > -1)
+        {
+            CreateNewForm(neutral, currentPosition);
+        }
+        else
+        {
+            CreateNewForm(evil, currentPosition);
+        }
+        saveSettings();
+    }
+
+    private void CreateNewForm(UnityEngine.Object form, Vector3 position)
+    {
+        Destroy(currentForm);
+        currentForm = (GameObject)Instantiate(form, position, Quaternion.identity);
+        currentForm.GetComponent<CharacterController2D>().healthbar = healthbar;
+        cinemaCamera.m_Follow = currentForm.transform;
+    }
+
+}

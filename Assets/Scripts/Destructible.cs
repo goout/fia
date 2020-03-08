@@ -8,13 +8,17 @@ public class Destructible : MonoBehaviour
     [SerializeField] int health = 3;
 
     [SerializeField] UnityEngine.Object destructableRef;
+    [SerializeField] int reward = 0;
     bool isShaking = false;
     Vector2 startPos;
     float shakeAmount = .06f;
-    // Start is called before the first frame update
+
+    private GameManager gameManager;
+
     void Start()
     {
         startPos = transform.position;
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -46,6 +50,8 @@ public class Destructible : MonoBehaviour
         GameObject destructable = (GameObject)Instantiate(destructableRef);
         destructable.transform.position = transform.position;
         Destroy(gameObject);
+        if (reward != 0)
+            gameManager.ChangeForm(reward);
     }
 
     void StopShaking()

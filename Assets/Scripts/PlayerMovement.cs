@@ -54,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
         jump = false;
         if (transform.position.y < deathBorder)
         {
+            GameManager.karma = 0;
+            GameManager.saveSettings();
             RestartScene();
         }
     }
@@ -65,7 +67,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void OnDeath()
-    {
+    {   
+        GameManager.karma = 0;
+        GameManager.saveSettings();
         animator.SetBool("isAlive", false);
         Invoke("RestartScene", 3f);
     }
