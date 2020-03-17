@@ -19,20 +19,22 @@ public class GameManager : MonoBehaviour
 
     private static Cinemachine.CinemachineVirtualCamera cinemaCamera;
 
+    public static GameManager instance = null;
+
     void Start()
     {
-        /*         if (instance == null)
-                {
-                    instance = this;
-                }
-                else if (instance == this)
-                {
-                    Destroy(gameObject);
-                } */
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance == this)
+        {
+            Destroy(gameObject);
+        }
         cinemaCamera = GameObject.Find("CM vcam1").GetComponent<Cinemachine.CinemachineVirtualCamera>();
-        //DontDestroyOnLoad(gameObject);
+       // DontDestroyOnLoad(gameObject);
         InitializeManager();
-        CreateNewForm(neutral, startPosition);
+        CreateNewForm(GetForm(), startPosition);
     }
 
     private void InitializeManager()
@@ -49,15 +51,12 @@ public class GameManager : MonoBehaviour
     public void ChangeForm(int addendum)
     {
         karma += addendum;
-        if (karma > -1)
-        {
-            CreateNewForm(neutral, currentPosition);
-        }
-        else
-        {
-            CreateNewForm(evil, currentPosition);
-        }
+        CreateNewForm(GetForm(), currentPosition);
         saveSettings();
+    }
+
+    private UnityEngine.Object GetForm() {
+        return karma > -1 ? neutral : evil;
     }
 
     private void CreateNewForm(UnityEngine.Object form, Vector3 position)

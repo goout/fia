@@ -123,3 +123,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   destructableRef: {fileID: 0}
+  reward: 0

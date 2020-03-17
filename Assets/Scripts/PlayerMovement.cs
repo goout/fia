@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+ #if UNITY_IOS || UNITY_ANDROID
+ bool mobile = true;
+ #endif
+
     public CharacterController2D controller;
     public Animator animator;
     public float runSpeed = 40f;
@@ -26,18 +31,22 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetButtonDown("Jump"))
             {
-            //    Debug.Log("jump");
-                jump = true;
-                animator.SetBool("isJumping", true);
+                Jump();
             }
 
-            if (Input.GetButtonDown("Fire1") && !animator.GetBool("isAttacking") && !animator.GetBool("isJumping"))
+            if (!mobile && Input.GetButtonDown("Fire1") && !animator.GetBool("isAttacking") && !animator.GetBool("isJumping"))
             {
                 animator.SetBool("isAttacking", true);
                 animator.Play("Attack");
                 StartCoroutine(DoAttack());
             }
         }
+    }
+
+    private void Jump()
+    {
+        jump = true;
+        animator.SetBool("isJumping", true);
     }
 
     IEnumerator DoAttack()
@@ -54,7 +63,6 @@ public class PlayerMovement : MonoBehaviour
         jump = false;
         if (transform.position.y < deathBorder)
         {
-            GameManager.karma = 0;
             GameManager.saveSettings();
             RestartScene();
         }
@@ -62,13 +70,12 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnLanding()
     {
-       // Debug.Log("ground");
+        // Debug.Log("ground");
         animator.SetBool("isJumping", false);
     }
 
     public void OnDeath()
-    {   
-        GameManager.karma = 0;
+    {
         GameManager.saveSettings();
         animator.SetBool("isAlive", false);
         Invoke("RestartScene", 3f);
