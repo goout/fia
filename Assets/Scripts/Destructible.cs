@@ -35,8 +35,11 @@ public class Destructible : MonoBehaviour
     {
         if (collision.CompareTag("Weapon"))
         {
-            isShaking = true;
-            Invoke("StopShaking", .5f);
+            if (!isShaking)
+            {
+                isShaking = true;
+                Invoke("StopShaking", .6f);
+            }
             health--;
             if (health <= 0)
             {

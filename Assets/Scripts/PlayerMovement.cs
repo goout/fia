@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
 
- #if UNITY_IOS || UNITY_ANDROID
- bool mobile = true;
- #else
+#if UNITY_IOS || UNITY_ANDROID
+    bool mobile = true;
+#else
  bool mobile = false;
- #endif
+#endif
 
     public CharacterController2D controller;
     public Animator animator;
@@ -26,7 +26,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        if (!mobile)
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
         if (animator.GetBool("isAlive"))
         {
             animator.SetFloat("speed", Mathf.Abs(horizontalMove));
@@ -37,17 +39,27 @@ public class PlayerMovement : MonoBehaviour
             }
             if (!mobile && Input.GetButtonDown("Fire1") && !animator.GetBool("isAttacking") && !animator.GetBool("isJumping"))
             {
-                animator.SetBool("isAttacking", true);
-                animator.Play("Attack");
-                StartCoroutine(DoAttack());
+                Attack();
             }
         }
     }
 
-    private void Jump()
+    public void Move(float InputAxis)
+    {
+        horizontalMove = InputAxis * runSpeed;
+    }
+
+    public void Jump()
     {
         jump = true;
         animator.SetBool("isJumping", true);
+    }
+
+    public void Attack()
+    {
+        animator.SetBool("isAttacking", true);
+        animator.Play("Attack");
+        StartCoroutine(DoAttack());
     }
 
     IEnumerator DoAttack()

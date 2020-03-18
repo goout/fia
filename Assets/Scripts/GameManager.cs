@@ -71,4 +71,19 @@ public class GameManager : MonoBehaviour
         cinemaCamera.m_Follow = currentForm.transform;
     }
 
+    public void Move(float InputAxis)
+    {
+        currentForm.GetComponent<PlayerMovement>().Move(InputAxis);
+    }
+
+    public void Jump()
+    {
+        currentForm.GetComponent<PlayerMovement>().Jump();
+    }
+
+    public void Attack()
+    {
+        currentForm.GetComponent<PlayerMovement>().Attack();
+    }
+
 }
