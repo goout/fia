@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 
  #if UNITY_IOS || UNITY_ANDROID
  bool mobile = true;
+ #else
+ bool mobile = false;
  #endif
 
     public CharacterController2D controller;
@@ -33,7 +35,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 Jump();
             }
-
             if (!mobile && Input.GetButtonDown("Fire1") && !animator.GetBool("isAttacking") && !animator.GetBool("isJumping"))
             {
                 animator.SetBool("isAttacking", true);
