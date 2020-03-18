@@ -57,15 +57,19 @@ public class PlayerMovement : MonoBehaviour
 
     public void Attack()
     {
-        animator.SetBool("isAttacking", true);
-        animator.Play("Attack");
-        StartCoroutine(DoAttack());
+        if (!animator.GetBool("isAttacking"))
+        {
+            animator.SetBool("isAttacking", true);
+            animator.Play("Attack");
+            StartCoroutine(DoAttack());
+        }
     }
 
     IEnumerator DoAttack()
     {
+        yield return new WaitForSeconds(.1f);
         controller.attackHitBox.SetActive(true);
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitForSeconds(.1f);
         controller.attackHitBox.SetActive(false);
         animator.SetBool("isAttacking", false);
     }
