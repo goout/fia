@@ -54,7 +54,7 @@ public class Destructible : MonoBehaviour
         destructable.transform.position = transform.position;
         Destroy(gameObject);
         if (reward != 0)
-            gameManager.ChangeForm(reward);
+            gameManager.ChangeKarma(reward);
     }
 
     void StopShaking()

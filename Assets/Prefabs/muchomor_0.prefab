@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1166774205507784112}
   - component: {fileID: 4482640194278512924}
   - component: {fileID: 225534282209543841}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: muchomor_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 520105862330769517, guid: 8be0774b247fc3e428a03c10caaa97c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -96,7 +96,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.027431965, y: 0.03657669}
+  m_Offset: {x: 0.027431965, y: -0.14499429}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -107,7 +107,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8827844, y: 2.6368465}
+  m_Size: {x: 1.8827844, y: 2.2737045}
   m_EdgeRadius: 0
 --- !u!114 &225534282209543841
 MonoBehaviour:
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6f2db07f1408714babd9353ae49a8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  destructableRef: {fileID: 0}
-  reward: 0
+  health: 5
+  destructableRef: {fileID: 2888806088410184882, guid: 514e9b331dfdc0f499968f4a70ac5632,
+    type: 3}
+  reward: 2

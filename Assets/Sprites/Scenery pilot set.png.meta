@@ -1,0 +1,775 @@
+fileFormatVersion: 2
+guid: c5c2f0d0f93579e479470cac66063079
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7233457383652838033
+    second: Scenery pilot set_0
+  - first:
+      213: -4960907928006633928
+    second: Scenery pilot set_1
+  - first:
+      213: -7020707335462133000
+    second: Scenery pilot set_2
+  - first:
+      213: 3105906004793368837
+    second: Scenery pilot set_3
+  - first:
+      213: -7053995698100015887
+    second: Scenery pilot set_4
+  - first:
+      213: 8839912592917526342
+    second: Scenery pilot set_5
+  - first:
+      213: -5139655492914295655
+    second: Scenery pilot set_6
+  - first:
+      213: -4260014095550893822
+    second: Scenery pilot set_7
+  - first:
+      213: -7158205186882518345
+    second: Scenery pilot set_8
+  - first:
+      213: 8256765436395323335
+    second: Scenery pilot set_9
+  - first:
+      213: 7427385983397671751
+    second: Scenery pilot set_10
+  - first:
+      213: 906644429068817096
+    second: Scenery pilot set_11
+  - first:
+      213: -1398544397020520998
+    second: Scenery pilot set_12
+  - first:
+      213: -7336846856119973098
+    second: Scenery pilot set_13
+  - first:
+      213: -2983935314567939262
+    second: Scenery pilot set_14
+  - first:
+      213: -7713756947104438595
+    second: Scenery pilot set_15
+  - first:
+      213: -2630312290622569637
+    second: Scenery pilot set_16
+  - first:
+      213: -6628390332308566854
+    second: Scenery pilot set_17
+  - first:
+      213: -4784951574126773597
+    second: Scenery pilot set_18
+  - first:
+      213: -1777980820251866421
+    second: Scenery pilot set_19
+  - first:
+      213: -650252784635270524
+    second: Scenery pilot set_20
+  - first:
+      213: 4106397612619053327
+    second: Scenery pilot set_21
+  - first:
+      213: -7662950823828767579
+    second: Scenery pilot set_22
+  - first:
+      213: -5208226864266974447
+    second: Scenery pilot set_23
+  - first:
+      213: 9151650328996852014
+    second: Scenery pilot set_24
+  - first:
+      213: 3400525432254711064
+    second: Scenery pilot set_25
+  - first:
+      213: 8738906287362632290
+    second: Scenery pilot set_26
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Scenery pilot set_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 901
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65327585d89d9b90800000000000000
+      internalID: -7233457383652838033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_1
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 899
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836deb30680572bb0800000000000000
+      internalID: -4960907928006633928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_2
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 900
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f2eccd20ef619e90800000000000000
+      internalID: -7020707335462133000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_3
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 900
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50126793e056a1b20800000000000000
+      internalID: 3105906004793368837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_4
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 900
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc6d97494c2b1e90800000000000000
+      internalID: -7053995698100015887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_5
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 899
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 647f95adaadadaa70800000000000000
+      internalID: 8839912592917526342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_6
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 748
+        width: 120
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c45fc6f864ca8b0800000000000000
+      internalID: -5139655492914295655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_7
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 750
+        width: 122
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201388820c361e4c0800000000000000
+      internalID: -4260014095550893822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_8
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 751
+        width: 138
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2428eee42f8ac90800000000000000
+      internalID: -7158205186882518345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_9
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 744
+        width: 374
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cff01e0b6ce59270800000000000000
+      internalID: 8256765436395323335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 595
+        width: 100
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 743322e2330631760800000000000000
+      internalID: 7427385983397671751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_11
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 595
+        width: 100
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2db3cfd4c059c00800000000000000
+      internalID: 906644429068817096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_12
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 594
+        width: 100
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add9afcd74f579ce0800000000000000
+      internalID: -1398544397020520998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_13
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 592
+        width: 307
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b078918a84e2a90800000000000000
+      internalID: -7336846856119973098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_14
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 452
+        width: 100
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b3f6614aee696d0800000000000000
+      internalID: -2983935314567939262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_15
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 453
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db663240dea33f490800000000000000
+      internalID: -7713756947104438595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_16
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 453
+        width: 100
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53091d58e04f7bd0800000000000000
+      internalID: -2630312290622569637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_17
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 495
+        width: 306
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc4d1a8c1a3304a0800000000000000
+      internalID: -6628390332308566854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_18
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 307
+        width: 103
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa3ab425ef689db0800000000000000
+      internalID: -4784951574126773597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_19
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 307
+        width: 104
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca0e673dd75357e0800000000000000
+      internalID: -1777980820251866421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_20
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 311
+        width: 100
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a2b9d9986d9f6f0800000000000000
+      internalID: -650252784635270524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_21
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 376
+        width: 295
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09bbae3fdadcf830800000000000000
+      internalID: 4106397612619053327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_22
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 276
+        width: 295
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac366663dab7a590800000000000000
+      internalID: -7662950823828767579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_23
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 167
+        width: 100
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b68b5e249a8b7b0800000000000000
+      internalID: -5208226864266974447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_24
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 165
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21b1789c71310f70800000000000000
+      internalID: 9151650328996852014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_25
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 164
+        width: 100
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81549372dd7113f20800000000000000
+      internalID: 3400525432254711064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery pilot set_26
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 168
+        width: 300
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a6da7b7f4d64970800000000000000
+      internalID: 8738906287362632290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
