@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     protected Animator animator;
     protected SpriteRenderer spriteRenderer;
 
+    protected bool isHit = false;
+
     private void Start()
     {
         Init();
@@ -52,7 +54,8 @@ public class Enemy : MonoBehaviour
             currentTarget = pointA.position;
             animator.SetTrigger("Idle");
         }
-        transform.position = Vector3.MoveTowards(transform.position, currentTarget, speed * Time.deltaTime);
+        if (isHit == false)
+            transform.position = Vector3.MoveTowards(transform.position, currentTarget, speed * Time.deltaTime);
     }
 
 }

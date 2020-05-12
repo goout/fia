@@ -16,9 +16,17 @@ public class Skeleton : Enemy, IDamageable
     {
         Debug.Log("Damage");
         Health--;
+        animator.SetTrigger("Hit");
+        isHit = true;
+        animator.SetBool("InCombat", true);
         if (Health < 1)
         {
-            Destroy(this.gameObject);
+            StartCoroutine(DestroyCoroutine());
         }
+    }
+
+    IEnumerator DestroyCoroutine() {
+        yield return new WaitForSeconds(2f);
+        Destroy(this.gameObject);
     }
 }
