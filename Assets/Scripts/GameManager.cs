@@ -52,7 +52,6 @@ public class GameManager : MonoBehaviour
     public void ChangeKarma(int addendum)
     {
         karma += addendum;
-        Debug.Log(karma);
         if (!currentForm.name.StartsWith(GetForm().name))
             CreateNewForm(GetForm(), currentPosition);
         saveSettings();
@@ -65,8 +64,6 @@ public class GameManager : MonoBehaviour
 
     private void CreateNewForm(UnityEngine.Object form, Vector3 position)
     {
-        Debug.Log("new form");
-        Debug.Log(karma);
         int currentHealth = 100;
         if (currentForm)
             currentHealth = currentForm.GetComponent<Player>().currentHealth;
@@ -79,7 +76,6 @@ public class GameManager : MonoBehaviour
 
     public void Move(float InputAxis)
     {
-        Debug.Log(InputAxis);
         currentForm.GetComponent<Player>().Move(InputAxis);
     }
 

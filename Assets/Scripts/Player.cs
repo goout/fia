@@ -4,7 +4,7 @@ using Spine.Unity;
 using Spine.Unity.Examples;
 using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamageable
 {
 
     //#if UNITY_IOS || UNITY_ANDROID
@@ -52,6 +52,8 @@ public class Player : MonoBehaviour
 
     bool isGrounded = false;
 
+    public int Health { get; set; }
+
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +65,7 @@ public class Player : MonoBehaviour
         healthbar.SetMaxHealth(maxHealth);
         healthbar.SetHealth(currentHealth);
         skeletonAnimation = transform.Find("Visuals/Spine").GetComponent<SkeletonAnimation>();
-        Debug.Log(mobile);
+//        Debug.Log(mobile);
     }
 
     // Update is called once per frame
@@ -184,11 +186,11 @@ public class Player : MonoBehaviour
     {
         if (collider.CompareTag("Spikes"))
         {
-            TakeDamage(20);
+            Damage(20);
         }
     }
 
-    void TakeDamage(int damage)
+    public void Damage(int damage)
     {
         currentHealth -= damage;
         healthbar.SetHealth(currentHealth);

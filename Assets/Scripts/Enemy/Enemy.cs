@@ -23,7 +23,11 @@ public class Enemy : MonoBehaviour
     }
 
     public virtual void Update()
-    {   Debug.Log(player);
+    {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        }
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") && animator.GetBool("InCombat") == false)
             return;
         Movement();
@@ -33,7 +37,7 @@ public class Enemy : MonoBehaviour
     {
         animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player = GameObject.FindGameObjectWithTag("Player") == null ? null : GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     public virtual void Movement()
@@ -63,12 +67,22 @@ public class Enemy : MonoBehaviour
         }
 
         float distance = Vector3.Distance(transform.localPosition, player.transform.localPosition);
-        
 
-        if (distance > 4.0f)
+        if (distance > 5.0f)
         {
             isHit = false;
             animator.SetBool("InCombat", false);
+        }
+
+        Vector3 direction = player.transform.localPosition - transform.localPosition;
+
+        if (direction.x > 0 && animator.GetBool("InCombat") == true)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (direction.x < 0 && animator.GetBool("InCombat") == true)
+        {
+            spriteRenderer.flipX = true;
         }
 
     }

@@ -12,10 +12,9 @@ public class Skeleton : Enemy, IDamageable
         Health = base.health;
     }
 
-    public void Damage()
+    public void Damage(int damage)
     {
-        Debug.Log("Damage");
-        Health--;
+        Health-=damage;
         animator.SetTrigger("Hit");
         isHit = true;
         animator.SetBool("InCombat", true);
