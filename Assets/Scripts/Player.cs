@@ -8,7 +8,7 @@ public class Player : MonoBehaviour, IDamageable
 {
 
     //#if UNITY_IOS || UNITY_ANDROID
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
     bool mobile = false;
 #else
  bool mobile = true;

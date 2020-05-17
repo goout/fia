@@ -20,6 +20,8 @@ public class Skeleton : Enemy, IDamageable
         animator.SetBool("InCombat", true);
         if (Health < 1)
         {
+            isDead = true;
+            animator.SetTrigger("Death");
             StartCoroutine(DestroyCoroutine());
         }
     }
