@@ -14,7 +14,7 @@ public class Player : MonoBehaviour, IDamageable
  bool mobile = true;
 #endif
 
-
+    public int diamonds;
 
     private Rigidbody2D rigid;
     [SerializeField] private float speed;
