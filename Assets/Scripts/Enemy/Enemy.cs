@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public GameObject diamondPrefab;
     [SerializeField] protected int health;
     [SerializeField] protected int speed;
     [SerializeField] protected int gems;

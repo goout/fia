@@ -1789,6 +1789,17 @@ PrefabInstance:
       propertyPath: pointB
       value: 
       objectReference: {fileID: 656848768}
+    - target: {fileID: 572634225712838218, guid: efb7cb13f6dd06f4ebd1f289b03bd41e,
+        type: 3}
+      propertyPath: gems
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 572634225712838218, guid: efb7cb13f6dd06f4ebd1f289b03bd41e,
+        type: 3}
+      propertyPath: diamondPrefab
+      value: 
+      objectReference: {fileID: 3310757610017490622, guid: 1f027a05e97afdb4c8145f06c9c68fe7,
+        type: 3}
     - target: {fileID: 3370957675184085456, guid: efb7cb13f6dd06f4ebd1f289b03bd41e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1867,7 +1878,7 @@ PrefabInstance:
     - target: {fileID: 3310757610017490608, guid: 1f027a05e97afdb4c8145f06c9c68fe7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.73
+      value: -2.66
       objectReference: {fileID: 0}
     - target: {fileID: 3310757610017490608, guid: 1f027a05e97afdb4c8145f06c9c68fe7,
         type: 3}
@@ -3682,6 +3693,17 @@ PrefabInstance:
       propertyPath: pointB
       value: 
       objectReference: {fileID: 1779914952}
+    - target: {fileID: 572634225712838218, guid: efb7cb13f6dd06f4ebd1f289b03bd41e,
+        type: 3}
+      propertyPath: gems
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 572634225712838218, guid: efb7cb13f6dd06f4ebd1f289b03bd41e,
+        type: 3}
+      propertyPath: diamondPrefab
+      value: 
+      objectReference: {fileID: 3310757610017490622, guid: 1f027a05e97afdb4c8145f06c9c68fe7,
+        type: 3}
     - target: {fileID: 3370957675184085456, guid: efb7cb13f6dd06f4ebd1f289b03bd41e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4289,6 +4311,17 @@ PrefabInstance:
       propertyPath: pointB
       value: 
       objectReference: {fileID: 218939062}
+    - target: {fileID: 572634225712838218, guid: efb7cb13f6dd06f4ebd1f289b03bd41e,
+        type: 3}
+      propertyPath: gems
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 572634225712838218, guid: efb7cb13f6dd06f4ebd1f289b03bd41e,
+        type: 3}
+      propertyPath: diamondPrefab
+      value: 
+      objectReference: {fileID: 3310757610017490622, guid: 1f027a05e97afdb4c8145f06c9c68fe7,
+        type: 3}
     - target: {fileID: 3370957675184085456, guid: efb7cb13f6dd06f4ebd1f289b03bd41e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5418,6 +5451,17 @@ PrefabInstance:
       propertyPath: pointB
       value: 
       objectReference: {fileID: 284756760}
+    - target: {fileID: 572634225712838218, guid: efb7cb13f6dd06f4ebd1f289b03bd41e,
+        type: 3}
+      propertyPath: gems
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 572634225712838218, guid: efb7cb13f6dd06f4ebd1f289b03bd41e,
+        type: 3}
+      propertyPath: diamondPrefab
+      value: 
+      objectReference: {fileID: 3310757610017490622, guid: 1f027a05e97afdb4c8145f06c9c68fe7,
+        type: 3}
     - target: {fileID: 3370957675184085456, guid: efb7cb13f6dd06f4ebd1f289b03bd41e,
         type: 3}
       propertyPath: m_LocalPosition.x
