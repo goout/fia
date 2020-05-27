@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Spider : Enemy, IDamageable
 {
+    public GameObject acidPrefab;
     public int Health { get; set; }
 
     public override void Init()
@@ -12,14 +13,13 @@ public class Spider : Enemy, IDamageable
         Health = base.health;
     }
 
+
+
     public void Damage(int damage)
     {
         if (isDead == true)
             return;
         Health -= damage;
-        animator.SetTrigger("Hit");
-        isHit = true;
-        animator.SetBool("InCombat", true);
         if (Health < 1)
         {
             isDead = true;
@@ -34,6 +34,20 @@ public class Spider : Enemy, IDamageable
     {
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
+    }
+
+    public override void Update(){
+        
+    }
+
+    public override void Movement()
+    {
+
+    }
+
+    public void Attack()
+    {
+        Instantiate(acidPrefab, new Vector3(transform.position.x, transform.position.y - 0.4f, transform.position.z), Quaternion.identity);
     }
 }
 
