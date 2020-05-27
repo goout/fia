@@ -2986,6 +2986,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 279470007, guid: c5ca1b88e445b7a4d93ec7926fefe645, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.8812103
+      objectReference: {fileID: 0}
+    - target: {fileID: 279470007, guid: c5ca1b88e445b7a4d93ec7926fefe645, type: 3}
+      propertyPath: m_Size.x
+      value: 2.7541962
+      objectReference: {fileID: 0}
     - target: {fileID: 279470008, guid: c5ca1b88e445b7a4d93ec7926fefe645, type: 3}
       propertyPath: acidPrefab
       value: 
