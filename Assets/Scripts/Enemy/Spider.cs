@@ -13,8 +13,6 @@ public class Spider : Enemy, IDamageable
         Health = base.health;
     }
 
-
-
     public void Damage(int damage)
     {
         if (isDead == true)
@@ -37,7 +35,7 @@ public class Spider : Enemy, IDamageable
     }
 
     public override void Update(){
-        
+
     }
 
     public override void Movement()
