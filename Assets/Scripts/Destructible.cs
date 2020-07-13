@@ -24,6 +24,7 @@ public class Destructible : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        startPos = transform.position;
         if (isShaking)
         {
             transform.position = startPos + UnityEngine.Random.insideUnitCircle * shakeAmount;
@@ -52,6 +53,7 @@ public class Destructible : MonoBehaviour
     {
         GameObject destructable = (GameObject)Instantiate(destructableRef);
         destructable.transform.position = transform.position;
+        destructable.transform.rotation = transform.rotation;
         Destroy(gameObject);
         if (reward != 0)
             gameManager.ChangeKarma(reward);
