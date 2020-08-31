@@ -64,28 +64,47 @@ public class Enemy : MonoBehaviour
             currentTarget = pointA.position;
             animator.SetTrigger("Idle");
         }
-        if (isHit == false)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, currentTarget, speed * Time.deltaTime);
-        }
+
 
         float distance = Vector3.Distance(transform.localPosition, player.transform.localPosition);
 
-        if (distance > 5.0f)
+        if (distance > 8.0f)
         {
             isHit = false;
             animator.SetBool("InCombat", false);
         }
+        else
+        {
+            if (distance <= 3f)
+                animator.SetBool("InCombat", true);
+        }
 
         Vector3 direction = player.transform.localPosition - transform.localPosition;
 
-        if (direction.x > 0 && animator.GetBool("InCombat") == true)
+        if (direction.x > 0 && distance < 8f)
         {
             spriteRenderer.flipX = false;
         }
-        else if (direction.x < 0 && animator.GetBool("InCombat") == true)
+        else if (direction.x < 0 && distance < 8f)
         {
             spriteRenderer.flipX = true;
+        }
+
+        if (isHit == false && distance > 8.0f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, currentTarget, speed * Time.deltaTime);
+        }
+        else
+        {
+            if (distance > 3f)
+            {
+                transform.position = Vector3.MoveTowards
+                (
+                    transform.position,
+                    new Vector3(player.transform.localPosition.x, currentTarget.y, currentTarget.z), speed * Time.deltaTime
+                );
+            }
+
         }
 
     }

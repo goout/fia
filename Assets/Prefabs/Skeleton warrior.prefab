@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ff2c63fd532c04598f8aba15bfae52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diamondPrefab: {fileID: 0}
   health: 3
   speed: 4
   gems: 0
@@ -281,7 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3370957675184085456}
   m_Layer: 0
-  m_Name: Skeleton warrior 2
+  m_Name: Skeleton warrior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
